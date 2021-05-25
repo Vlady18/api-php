@@ -1,0 +1,51 @@
+@import 'config/vars'
+
+.site-button--aqua
+  border-radius: 23.5px
+  min-width: 206px
+  padding: 0 10px
+  display: inline-block
+  text-align: center
+  color: $blue
+  background-color: $aqua
+  outline: none
+  cursor: pointer
+  font-size: 16px
+  font-family: 'Proxima Nova Rg', 'Roboto', sans-serif
+  font-weight: 700
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  height: 47px
+  line-height: 47px
+  text-decoration: none
+  @media (hover: hover) and (pointer: fine)
+    transition: all 0.2s ease-in-out
+    &:hover, &:active, &:focus
+      background-color: #fff
+
+
+.site-button
+  padding: 13px 0
+  max-width: 213px
+  width: 100%
+  border: 1px solid $blue
+  border-radius: 23.5px
+  outline: none
+  color: #001767
+  font-size: 16px
+  line-height: 20px
+  background-color: rgba(255,255,255,0)
+  text-transform: uppercase
+  font-weight: 700
+  text-decoration: none
+  letter-spacing: 0.02em
+  text-align: center
+  position: relative
+  transition: all 0.2s ease-in-out
+  display: inline-block
+  font-family: 'Proxima Nova Rg', 'Roboto', sans-serif
+  @media (hover: hover) and (pointer: fine)
+    &:hover, &:active, &:focus
+      border: 1px solid $blue
+      background-color: $blue
+      color: #ffffff

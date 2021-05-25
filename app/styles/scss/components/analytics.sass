@@ -1,0 +1,47 @@
+.analytics
+  padding: 190px 0 147px
+  +b(800)
+    padding: 30px 0 50px
+  +r(1299)
+    padding: 30px 0 50px
+  +r(1023)
+    padding-bottom: 30px
+  +r(767)
+    padding-top: 15px
+    padding-bottom: 30px
+  &_wrap
+    align-items: center
+    +r(1023)
+      display: block
+  &_left
+    max-width: 470px
+    width: 100%
+    +r(1023)
+      margin: 0 auto 10px
+      text-align: center
+    +r(767)
+      margin-bottom: 26px
+  &_right
+    max-width: 890px
+    width: 100%
+    margin-left: 32px
+    +r(1023)
+      margin: 0 auto
+  &_header
+    margin-bottom: 14px
+    .h1
+      color: $blue
+  &_text
+    *
+      color: $blue
+      font-size: 24px
+      font-weight: 400
+      line-height: 1.35em
+      letter-spacing: 0.02em
+      +r(767)
+        font-size: 18px
+  &_img
+    img
+      display: block
+      max-width: 100%
+      height: auto

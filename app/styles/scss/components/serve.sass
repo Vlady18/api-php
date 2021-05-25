@@ -1,0 +1,128 @@
+.serve
+  padding: 127px 0 100px
+  +b(800)
+    padding: 80px 0 100px
+  +r(1023)
+    padding: 45px 0 100px
+  +r(767)
+    padding-bottom: 50px
+  &_wrap
+    align-items: center
+    max-width: 100%
+    width: 100%
+    +r(1023)
+      flex-direction: column
+  &_left
+    max-width: 500px
+    width: 100%
+    margin-right: 24px
+    +r(1023)
+      margin: 0 auto
+      text-align: center
+      order: 1
+  &_header
+    margin-bottom: 14px
+    *
+      color: $blue
+  &_text
+    *
+      color: $blue
+      font-size: 24px
+      font-weight: 400
+      line-height: 1.35em
+      letter-spacing: 0.02em
+      +r(767)
+        font-size: 18px
+  &_right
+    max-width: 900px
+    width: 100%
+    +r(1299)
+      max-width: 700px
+    +r(1199)
+      max-width: 500px
+    +r(1023)
+      margin: 0 auto 32px
+    &-wrap
+      max-width: 100%
+      position: relative
+      +r(1023)
+        padding: 0 40px
+  &_img
+    max-width: 100%
+    display: block
+    +r(1023)
+      // height: 300px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+  &_slider
+    max-width: 100%
+    text-align: center
+    &-item
+      // display: block!important
+      margin: 0 auto
+      max-width: 690px
+      width: 100%
+      img
+        display: block
+        max-width: 100%
+        height: auto
+        margin: 0 auto
+        max-height: calc(100vh - 100px)
+        +r(1023)
+          // max-height: 100%
+          max-height: 300px
+    .slick-track
+      display: flex
+      align-items: center
+      justify-content: center
+    ul.slick-dots
+      position: absolute
+      bottom: -80px
+      left: 0
+      width: 100%
+      min-height: 46px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0px
+      +r(767)
+        bottom: -30px
+      li
+        cursor: pointer
+        padding: 12px
+        button
+          font-size: 0
+          width: 9px
+          height: 9px
+          border-radius: 50%
+          background: #C4C4C4
+          transition: all 0.2s linear
+        &.slick-active
+          button
+            width: 17px
+            height: 17px
+            background: $blue
+  &_arrow
+    top: 50%
+    position: absolute
+    z-index: 10
+    cursor: pointer
+    width: 30px
+    img, svg
+      display: block
+      max-width: 100%
+      height: auto
+      margin: auto
+      path
+        transition: all 0.2s ease-in-out
+    &:hover
+      path
+        stroke: $aqua
+    &--left
+      transform: translateY(-50%)
+      left: 0
+    &--right
+      right: 0
+      transform: translateY(-50%) rotate(180deg)

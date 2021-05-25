@@ -1,0 +1,48 @@
+.campaign
+  padding-bottom: 90px
+  +r(1023)
+    padding-top: 20px
+    padding-bottom: 40px
+  &_wrap
+    align-items: center
+    +r(1023)
+      flex-direction: column
+  &_left
+    width: 620px
+    margin-right: 24px
+    +r(1023)
+      order: 1
+      margin: 0 auto
+      max-width: 620px
+      width: 100%
+  &_right
+    width: 780px
+    +r(1023)
+      order: 0
+      margin: 0 auto 15px
+      max-width: 780px
+      width: 100%
+  &_header
+    margin-bottom: 14px
+    +r(767)
+      text-align: center
+    .h1
+      color: $blue
+  &_text
+    margin-bottom: 30px
+    +r(767)
+      text-align: center
+    p
+      color: $blue
+      font-size: 24px
+      font-weight: 400
+      line-height: 1.35em
+      letter-spacing: 0.02em
+      +r(767)
+        font-size: 18px
+  &_btn
+    +r(767)
+      text-align: center
+  &_img
+    img
+      max-height: calc(100vh - 40px)

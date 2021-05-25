@@ -1,0 +1,57 @@
+.s_popup
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 70
+  width: 100%
+  height: 100%
+  background-color: rgba(255,255,255,0.7)
+  overflow-y: auto
+  &_close
+    width: 30px
+    height: 30px
+    position: absolute
+    top: 25px
+    right: 25px
+    cursor: pointer
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 4px
+      background: black
+      top: 40%
+      left: 0
+      background: $blue
+      transform: rotate(45deg)
+      border-radius: 20px
+      transition: all 0.2s ease-in-out
+    &::after
+      transform: rotate(-45deg)
+    &:hover
+      &::after,
+      &::before
+        background: $aqua
+  &_wrap
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &_content
+    width: 100%
+    max-width: 600px
+    background: #fff
+    padding: 40px 24px 50px
+    position: relative
+    *
+      color: $blue
+      text-align: center
+    .h1
+      margin-bottom: 20px
+    p
+      font-size: 20px

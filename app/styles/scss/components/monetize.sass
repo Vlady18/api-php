@@ -1,0 +1,38 @@
+.monatize
+  min-height: 823px
+  padding: 50px 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  position: relative
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  +b(800)
+    min-height: 580px
+  +r(1299)
+    min-height: 580px
+  +r(1023)
+    min-height: 500px
+  +r(767)
+    min-height: 300px
+  &::after
+    position: absolute
+    content: ''
+    display: block
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: 1
+    background: #151314
+    opacity: 0.5
+  .container-big
+    z-index: 2
+    position: relative
+  &_title
+    max-width: 926px
+    width: 100%
+    margin: 0 auto

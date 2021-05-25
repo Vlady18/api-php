@@ -1,0 +1,33 @@
+.about
+  background: #fff
+  padding: 60px 0
+  +r(767)
+    padding: 20px 0
+  &_wrap
+    max-width: 771px
+    width: 100%
+    margin: 0 auto
+    text-align: center
+  &_header
+    margin-bottom: 33px
+    +r(767)
+      margin-bottom: 15px
+    h2
+      color: $blue
+  &_text
+    +r(767)
+      text-align: left
+    *
+      color: $blue
+      font-size: 24px
+      letter-spacing: 0.02em
+      font-weight: 400
+      line-height: 1.4em
+      +r(1023)
+        font-size: 20px
+      +r(767)
+        font-size: 18px
+    p
+      margin-bottom: 1em
+      &:last-child
+        margin-bottom: 0

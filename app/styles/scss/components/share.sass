@@ -1,0 +1,33 @@
+.share
+  padding: 18px 25px
+  background: #F2F3F3
+  margin-top: 60px
+  margin-bottom: 30px
+  &_wrap
+    align-items: center
+    +r(767)
+      display: block
+      text-align: center
+  &_left
+    margin-right: 32px
+    +r(767)
+      margin: 0 auto 18px
+    p
+      font-size: 16px
+      font-family: 'Proxima Nova Bold'
+  &_right
+    margin-left: auto
+  &_soc
+    align-items: center
+    margin: -3.5px
+    justify-content: flex-start
+    +r(767)
+      justify-content: center
+  &_item
+    display: block
+    padding: 3.5px
+    path
+      transition: all 0.2s ease-in-out
+    &:hover
+      path
+        fill: $aqua

@@ -1,0 +1,86 @@
+
+.banner{
+    max-width: 100%;
+    width: 100%;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px 0;
+    position: relative;
+    .container-big, .container{
+      z-index: 2;
+    }
+    &::after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+    @media all and (max-height: 800px) {
+      min-height: 360px;
+    }
+    &_title{
+        text-align: center;
+        margin-top: 10px;
+    }
+    &_label {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: #00D7A1;
+      text-decoration: none;
+      margin-bottom: 30px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: 'Proxima Nova Bold';
+      @media all and (max-width: 767px) {
+        margin-bottom: 12px;
+      }
+    }
+}
+
+.banner_text{
+    max-width: 100%;
+    width: 100%;
+    min-height: 440px;
+    background: #001767;
+    display: flex;
+    align-items: center;
+    padding: 0 0 90px 0;
+    &--special {
+      @media all and (max-width: 767px) {
+        min-height: 277px;
+        padding-bottom: 20px;
+        padding-top: 73px;
+        .banner_text_job-title {
+          margin-top: 0;
+        }
+      }
+    }
+    &_box{
+        max-width: 1021px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    &_title{
+        text-align: center;
+        margin-top: 90px;
+        // a{
+        //     font-size: 16px;
+        //     line-height: 20px;
+        //     letter-spacing: 0.02em;
+        //     color: #00D7A1;
+        //     text-decoration: none;
+        //     margin-bottom: 25px;
+        //     display: inline-block;
+        // }
+    }
+}
