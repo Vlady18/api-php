@@ -147,6 +147,8 @@ header
     text-transform: uppercase
     position: relative
     margin-bottom: 50px
+    color: #212223
+    text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff
     &:after, &:before
       content: ''
       width: 84px
@@ -199,4 +201,48 @@ header
     button
       width: 100%
       max-width: 180px
+
+#advantages
+  background: url("../../../images/sec-bg.png") no-repeat center / cover
+  padding-top: 130px
+  padding-bottom: 115px
+  .title
+    font-size: 40px
+    font-family: "Roboto-Bold", sans-serif
+    letter-spacing: 0.02em
+    color: #212223
+    text-transform: uppercase
+    text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff
+    span
+      font-size: 200px
+      font-family: "Roboto-Bold", sans-serif
+      letter-spacing: 0.02em
+      color: $white
+      text-transform: uppercase
+  .advantages-offer
+    display: flex
+    justify-content: space-between
+    width: 60%
+    flex-wrap: wrap
+    .advantages-item
+      display: flex
+      width: 100%
+      max-width: 345px
+      margin-bottom: 55px
+      img
+        //width: 69px
+      &__info
+        margin-left: 24px
+        .head
+          font-size: 24px
+          line-height: 28px
+          font-family: Roboto-Regular, sans-serif
+          color: #fff
+        p
+          font-size: 16px
+          line-height: 19px
+          color: $gray
+          margin-top: 18px
+          font-family: Roboto-Regular, sans-serif
+
 
