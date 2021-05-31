@@ -67,12 +67,8 @@ ul
   color: $gray
   display: inline-block
   border: 1px solid rgba(255, 255, 255, .5)
-header
-  background: url("../../../images/header-bg.png") no-repeat 0% 100% / cover
-  padding-bottom: 160px
-  padding-top: 40px
-  height: 100vh
-  .top-line
+.top-line
+  .container
     display: flex
     justify-content: space-between
     align-items: center
@@ -110,10 +106,10 @@ header
             height: 0
             transition: .3s
           &:before
-             top: 0
-             left: 0
-             border-right: none
-             border-bottom: none
+            top: 0
+            left: 0
+            border-right: none
+            border-bottom: none
           &:after
             bottom: 0
             right: 0
@@ -125,6 +121,24 @@ header
               width: 20px
               height: 20px
               border-color: $white
+.title
+  font-size: 40px
+  font-family: "Roboto-Bold", sans-serif
+  letter-spacing: 0.02em
+  color: #212223
+  text-transform: uppercase
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff
+  span
+    font-size: 200px
+    font-family: "Roboto-Bold", sans-serif
+    letter-spacing: 0.02em
+    color: $white
+    text-transform: uppercase
+header
+  background: url("../../../images/header-bg.png") no-repeat 0% 100% / cover
+  padding-bottom: 160px
+  padding-top: 40px
+  height: 100vh
   .header-main
     margin-top: 130px
   .phrase
@@ -206,6 +220,11 @@ header
   background: url("../../../images/sec-bg.png") no-repeat center / cover
   padding-top: 130px
   padding-bottom: 115px
+  .container
+    display: flex
+    justify-content: flex-end
+  .advantages-wrap
+    width: 845px
   .title
     font-size: 40px
     font-family: "Roboto-Bold", sans-serif
@@ -222,7 +241,7 @@ header
   .advantages-offer
     display: flex
     justify-content: space-between
-    width: 60%
+    //width: 60%
     flex-wrap: wrap
     .advantages-item
       display: flex
@@ -244,5 +263,60 @@ header
           color: $gray
           margin-top: 18px
           font-family: Roboto-Regular, sans-serif
+#pro-plan
+  background: #1E1F20
+  padding-bottom: 65px
+  .top-line
+    background: #171717
+    padding: 25px 0px 50px 0px
+    margin-bottom: 85px
+    .mail
+      a
+        display: flex
+        align-items: center
+      img
+        margin-right: 10px
+  .title
+    text-align: center
+    font-size: 40px
+    margin-bottom: 80px
+    span
+      font-size: 40px
+  .plans-wrap
+    display: flex
+    justify-content: space-between
+    .plans-item
+      margin-right: 28px
+      display: flex
+      justify-content: space-between
+      background: #ccc
+      overflow: hidden
+      color: #fff
+      position: relative
+      padding-left: 140px
+      padding-top: 35px
+      padding-bottom: 50px
+      padding-right: 35px
+      background: url("../../../images/pr-bg.png") no-repeat center / cover
+      &:last-child
+        margin-right: 0
+      &_img
+        position: absolute
+        top: -30px
+        left: -40px
+        //margin-left: -34px
+        //margin-top: -20px
+        img
+          max-width: inherit
+      &_title
+        font-size: 24px
+        font-family: 'Roboto-Regular', sans-serif
+        margin-bottom: 18px
+      &_text
+        font-size: 16px
+        line-height: 19px
+        color: $gray
+        font-family: 'Roboto-Regular', sans-serif
+
 
 
