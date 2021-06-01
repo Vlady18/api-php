@@ -285,6 +285,9 @@ header
   .plans-wrap
     display: flex
     justify-content: space-between
+    .plans-item-wrap
+      display: flex
+      flex-direction: column
     .plans-item
       margin-right: 28px
       display: flex
@@ -317,6 +320,58 @@ header
         line-height: 19px
         color: $gray
         font-family: 'Roboto-Regular', sans-serif
+        a
+          color: #5858D1
+          text-decoration: none
+          transition: all .3s ease
+          display: block
+          margin-top: 40px
+          display: flex
+          align-items: center
+
+        .arrow-hover div
+          margin-left: 20px
+          position: relative
+          transition: all .3s ease
+          //top: 20px
+          width: 14px
+          height: 1px
+          background-color: #337AB7
+          box-shadow: 0 3px 5px rgba(0, 0, 0, .2)
+          //left: 0
+          display:  inline-block
+
+        .arrow-hover div::after
+          content: ''
+          position: absolute
+          width: 7px
+          height: 1px
+          top: -3px
+          right: -1px
+          background-color: #337AB7
+          transform: rotate(45deg)
+
+        .arrow-hover div::before
+          content: ''
+          position: absolute
+          width: 7px
+          height: 1px
+          top: 3px
+          right: -1px
+          background-color: #337AB7
+          box-shadow: 0 3px 5px rgba(0, 0, 0, .2)
+          transform: rotate(-45deg)
+        .arrow-hover
+          &:hover
+            color: #fff
+            div, div::before, div::after
+              background-color: #fff
+            div
+              width: 50px
+
+
+        p
+          margin-bottom: 20px
 
 
 
