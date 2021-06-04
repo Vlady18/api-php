@@ -2,6 +2,7 @@ $white: #fff
 $black: #000
 $dark: #202222
 $gray: #B0B1B1
+$silver: rgba(255, 255, 255, .4)
 $blue: #2E2E7D
 $red: #9B7D60
 $hover-color: #9B7D60
@@ -15,6 +16,10 @@ $hover-color: #9B7D60
 @font-face
   font-family: 'Roboto-Medium'
   src: url('../../../fonts/Roboto-Medium.eot') format('eot'), url('../../../fonts/Roboto-Medium.woff') format('woff'), url('../../../fonts/Roboto-Medium.ttf') format('truetype')
+@font-face
+  font-family: 'Roboto-Medium-italic'
+  src: url('../../../fonts/Roboto-MediumItalic.eot') format('eot'), url('../../../fonts/Roboto-MediumItalic.woff') format('woff'), url('../../../fonts/Roboto-MediumItalic.ttf') format('truetype')
+
 @font-face
   font-family: 'Roboto-Bold'
   src: url('../../../fonts/Roboto-Bold.eot') format('eot'), url('../../../fonts/Roboto-Bold.woff') format('woff'), url('../../../fonts/Roboto-Bold.ttf') format('truetype')
@@ -56,6 +61,9 @@ ul
   transition: all 0.2s ease-in-out
   display: inline-block
   font-family: 'Roboto-Medium', sans-serif
+  &:hover
+    background: $white
+    color: #191A1B
 .field-control
   height: 56px
   line-height: 20px
@@ -280,8 +288,33 @@ header
     text-align: center
     font-size: 40px
     margin-bottom: 80px
+    position: relative
     span
       font-size: 40px
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      margin: 0 auto
+      width: 84px
+      height: 5px
+      background: $blue
+      bottom: -30px
+      left: 50%
+      transform: translate(-50%)
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      margin: 0 auto
+      width: 24px
+      height: 5px
+      background: $white
+      bottom: -30px
+      left: 50%
+      z-index: 99
+      transform: translate(-50%)
+
   .plans-wrap
     display: flex
     justify-content: space-between
@@ -368,10 +401,154 @@ header
               background-color: #fff
             div
               width: 50px
-
-
         p
           margin-bottom: 20px
+  .pro-plan_bottom
+    .control
+      text-align: center
+      margin-top: 50px
+      margin-bottom: 20px
 
+      display: flex
+      justify-content: space-between
+      align-items: center
 
-
+      &:before
+        content: ''
+        width: 100%
+        height: 1px
+        background: rgba(255, 255, 255, .2)
+      &:after
+        content: ''
+        width: 100%
+        height: 1px
+        background: rgba(255, 255, 255, .2)
+      button
+        width: 305px
+        min-width: 305px
+        height: 56px
+        font-size: 18px
+        margin: 0 auto
+        margin-left: 25px
+        margin-right: 25px
+    p
+      font-size: 18px
+      color: $gray
+      font-family: 'Roboto-Regular', sans-serif
+      text-align: center
+#developers
+  background: #000 url("../../../images/dev-bg.png") no-repeat center / cover
+  padding-bottom: 260px
+  .title
+    display: flex
+    align-items: center
+    margin-bottom: 45px
+    span
+    div.spec
+      margin-top: 60px
+      font-size: 40px
+      div
+        text-shadow: none
+        color: #fff
+  .sub-title
+    font-size: 24px
+    color: $gray
+    font-family: 'Roboto-Regular', sans-serif
+    margin-bottom: 10px
+  .slide-item
+    padding: 40px 25px
+    border: 1px solid rgba(255, 255, 255, .3)
+    width: 695px
+    max-width: 695px
+    &_wrap
+      display: flex
+    .img
+      margin-right: 25px
+    p
+      max-width: 540px
+      color: $white
+      font-size: 16px
+      line-height: 19px
+      font-family: 'Roboto-Medium-italic', sans-serif
+    .info
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+    .author
+      color: $silver
+      font-size: 16px
+      font-family: "Roboto-Regular", sans-serif
+  .sdv_dots
+    ul
+      display: flex
+      margin-bottom: 20px
+    button
+      width: 35px
+      height: 3px
+      background: $silver
+      margin-right: 8px
+      content: ' '
+      overflow: hidden
+      border: none
+      outline: none
+      color: transparent
+    li.slick-active
+      button
+        background: $blue
+  .control
+    margin-top: 60px
+    button
+      width: 305px
+      height: 56px
+#common
+  position: relative
+  background: #1E1F20
+  padding-top: 30px
+  .container
+    max-width: 100%
+    display: flex
+    justify-content: space-between
+    width: 100%
+    //margin-left: 0
+  .title
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+    span
+    div.spec
+      margin-top: 60px
+      font-size: 40px
+      div
+        text-shadow: none
+        color: #fff
+  .sub-title
+    font-size: 20px
+    line-height: 23px
+    color: $silver
+    font-family: "Roboto-Regular", sans-serif
+    margin-bottom: 15px
+  .common-info
+    margin-right: 10%
+  .case-item
+    background: url("../../../images/com-item.png") no-repeat center / cover
+    padding: 30px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 12px
+    max-width: 710px
+    align-items: center
+    .head
+      margin-right: 38px
+      font-size: 24px
+      line-height: 28px
+      font-family: "Roboto-Regular"
+      color: $white
+    p
+      font-size: 16px
+      line-height: 19px
+      max-width: 450px
+      font-family: "Roboto-Regular", sans-serif
+      color: $white
+  //.com-img
+  //  position: absolute
+  //  left: 0

@@ -3245,15 +3245,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (document.querySelector('.js-sdv-slider')) {
-    $('.js-sdv-slider').slick({
+  if (document.querySelector('.slider')) {
+    $('.slider').slick({
       infinite: true,
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true,
       appendDots: '.sdv_dots',
-      arrows: false,
+      arrows: true,
+      prevArrow: '<div class="prev arrow_carousel"><i class="fa fa-arrow-left"></i></div>',
+      nextArrow: '<div class="next arrow_carousel"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>',
       fade: true
     });
   }
