@@ -300,7 +300,11 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
-        appendDots: '.sdv_dots',
+//        appendDots: '.sdv_dots',
+    customPaging: function(slider, i) {
+      // this example would render "tabs" with titles
+      return '<span class="dot"></span>';
+    },
         arrows: true,
         prevArrow: '<div class="prev arrow_carousel"><i class="fa fa-arrow-left"></i></div>',
         nextArrow: '<div class="next arrow_carousel"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>',

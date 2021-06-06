@@ -143,11 +143,17 @@ ul
     letter-spacing: 0.02em
     color: $white
     text-transform: uppercase
+.burger
+  display: none
 header
   background: url("../../../images/header-bg.png") no-repeat 0% 100% / cover
   padding-bottom: 160px
   padding-top: 40px
   height: 100vh
+  position: relative
+  .tradingview-widget-container
+    position: absolute
+    bottom: 0
   .header-main
     margin-top: 130px
   .phrase
@@ -220,20 +226,31 @@ header
       color: $white
     input
       margin-right: 18px
-      width: 100%
+      height: 56px
+      width: 265px
     button
+      height: 56px
       width: 100%
       max-width: 180px
 
 #advantages
-  background: url("../../../images/sec-bg.png") no-repeat center / cover
-  padding-top: 130px
-  padding-bottom: 115px
+  background: url("../../../images/code-bg.png") no-repeat center / cover
+  //padding-top: 130px
+  position: relative
+  //padding-bottom: 150px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .code
+    //position: absolute
+    //top: 0
+    //left: 0
   .container
-    display: flex
-    justify-content: flex-end
+    //display: flex
+    //justify-content: flex-end
+    margin-right: 10%
   .advantages-wrap
-    width: 845px
+    max-width: 845px
   .title
     font-size: 40px
     font-family: "Roboto-Bold", sans-serif
@@ -250,14 +267,15 @@ header
   .advantages-offer
     display: flex
     justify-content: space-between
+    .advantages-offer_wr
     //width: 60%
-    flex-wrap: wrap
     .advantages-item
       display: flex
       width: 100%
       max-width: 345px
       margin-bottom: 55px
       img
+        max-width: none
         //width: 69px
       &__info
         margin-left: 24px
@@ -440,6 +458,20 @@ header
 #developers
   background: #000 url("../../../images/dev-bg.png") no-repeat center / cover
   padding-bottom: 260px
+  .top-line
+    background: #171717
+    padding: 25px 0px 50px 0px
+    margin-bottom: 85px
+    .mail
+      a
+        display: flex
+        align-items: center
+      img
+        margin-right: 10px
+  .dev-wrap
+    max-width: 695px
+    .control
+      text-align: center
   .title
     display: flex
     align-items: center
@@ -456,6 +488,19 @@ header
     color: $gray
     font-family: 'Roboto-Regular', sans-serif
     margin-bottom: 10px
+  .slider
+    max-width: 695px
+    .arrow_carousel
+      color: $white
+      font-size: 25px
+    .arrow_carousel.prev
+      position: absolute
+      bottom: -20px
+      left: 0
+    .arrow_carousel.next
+      position: absolute
+      right: 0
+      bottom: -20px
   .slide-item
     padding: 40px 25px
     border: 1px solid rgba(255, 255, 255, .3)
@@ -479,23 +524,24 @@ header
       color: $silver
       font-size: 16px
       font-family: "Roboto-Regular", sans-serif
-  .sdv_dots
-    ul
-      display: flex
-      margin-bottom: 20px
-    button
-      width: 35px
-      height: 3px
-      background: $silver
-      margin-right: 8px
-      content: ' '
-      overflow: hidden
-      border: none
-      outline: none
-      color: transparent
-    li.slick-active
-      button
-        background: $blue
+  ul.slick-dots
+    display: flex
+    margin-top: 20px
+    justify-content: center
+  span.dot
+    display: block
+    width: 35px
+    height: 3px
+    background: $silver
+    margin-right: 8px
+    content: ' '
+    overflow: hidden
+    border: none
+    outline: none
+    color: transparent
+  li.slick-active
+    span
+      background: $blue
   .control
     margin-top: 60px
     button
@@ -891,4 +937,136 @@ footer
           line-height: 14px
           color: $silver
           font-family: "Roboto-Regular", sans-serif
+.mob-code
+  display: none
+@media all and (max-width: 1725px)
+  #advantages .container
+    margin-left: -250px
+@media all and (max-width: 1560px)
+  #advantages .container
+    margin-right: 1%
+@media all and (max-width: 1360px)
+  .top-line nav ul li.mail
+    display: none
+  #advantages .code
+    display: none
+  #advantages .container
+    margin-left: 0
+    margin: 0 auto
+@media all and (max-width: 1245px)
+  #pro-plan .plans-wrap
+    flex-wrap: wrap
+  #pro-plan .plans-wrap .plans-item
+    margin-bottom: 20px
+    margin-top: 0!important
+    margin-right: 0!important
+    width: 100%
+  #pro-plan .plans-wrap .plans-item-wrap
+    width: 100%
+@media all and (max-width: 992px)
+  .top-line li
+    display: none
+  .top-line li.c-but
+    display: block
+  .burger
+    display: block
+  a.logo
+    margin-top: -20px
+    img
+      max-width: 85%
+@media all and (max-width: 768px)
+  #developers
+    background: #000 url(../../../images/dev-bg.png) no-repeat 10% 100%/cover
+  .mob-code
+    display: block
+  #advantages
+    flex-direction: column
+  #advantages .advantages-offer .advantages-item__info .head
+    font-size: 21px
+  #advantages .advantages-offer .advantages-item__info p
+    font-size: 12px
+    line-height: 14px
+  #advantages .advantages-offer
+    flex-direction: column
+  #advantages .advantages-offer .advantages-item
+    max-width: 100%
+  #advantages .title span
+    font-size: 128px
+  #advantages .title
+    font-size: 24px
+  header
+    height: auto
 
+@media all and (max-width: 576px)
+  #developers
+    .top-line
+      margin-bottom: 0
+      background: #17191E
+  #developers .title
+    font-size: 24px
+    span
+      font-size: 128px
+  #developers .title div.spec
+    font-size: 21px
+  #developers .sub-title
+    font-size: 14px
+    line-height: 16px
+  #developers .slide-item p
+    font-size: 12px
+    line-height: 14px
+  #developers .slide-item .author
+    font-size: 12px
+
+  #pro-plan .head-container.container
+    width: 95%
+  #pro-plan .container
+    width: 100%
+  #pro-plan .plans-wrap .plans-item_title
+    font-size: 18px
+  #pro-plan .plans-wrap .plans-item_text
+    font-size: 12px
+    line-height: 14px
+  #pro-plan .plans-wrap .plans-item_text a
+    font-size: 12px
+  #pro-plan .plans-wrap .plans-item
+    padding-left: 80px
+  #pro-plan .plans-wrap .plans-item_img img
+    max-width: 75%
+  #pro-plan .title
+    font-size: 24px
+    span
+      font-size: 24px
+  #pro-plan .pro-plan_bottom .control:before
+    display: none
+  #pro-plan .pro-plan_bottom .control:after
+    display: none
+  #pro-plan .pro-plan_bottom .control button
+    margin: 0 auto
+
+  header .phrase
+    font-size: 12px
+  header h1
+    font-size: 24px
+  header .title
+    font-size: 24px
+  header ul.list-plus li
+    font-size: 12px
+  header .sub-title
+    font-size: 12px
+    line-height: 14px
+  header .header-bottom
+    max-width: 100%
+  header form .line
+    flex-direction: column
+    button
+      width: 100%
+      height: 56px
+      display: block
+      max-width: none
+      margin-top: 20px
+  header form input
+    width: 100%
+  .top-line nav ul li.c-but button
+    font-size: 10px
+    width: 100px
+    height: 22px
