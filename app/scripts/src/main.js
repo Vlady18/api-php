@@ -1,4 +1,11 @@
  document.addEventListener('DOMContentLoaded', function () {
+ $('.burger').on('click', function(){
+  $('.mob-menu').addClass('active');
+ })
+  $('.mob-menu__head-close, .mob-menu a').on('click', function(){
+   $('.mob-menu').removeClass('active');
+  })
+
    document.addEventListener("click", x=>0);
     $('#preloader').fadeOut();
      if(document.querySelector('#fullpage')){
@@ -311,6 +318,7 @@
         fade: true
       })
     }
+
 
     if(document.querySelector('.js-sdv-slider')){
       $('.js-results-slider').slick({
