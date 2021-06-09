@@ -50,6 +50,9 @@ ul
   list-style: none
 body
   background: #1E1F20
+.btn.active
+  background: $white
+  color: #191A1B
 .btn
   border: 1px solid $blue
   outline: none
@@ -78,6 +81,7 @@ body
   height: 56px
   display: block
   width: 100%
+  padding-right: 15px
   border: 1px solid rgba(255, 255, 255, .5)
 .d-flex
   display: flex
@@ -263,6 +267,8 @@ body
         margin-left: 14px
     .notification.red
       background: #E13C08
+    .notification.green
+      background: rgba(25, 225, 8, .3)
     .files-wrap
       display: flex
       justify-content: space-between
@@ -281,6 +287,14 @@ body
         text-align: center
         &:first-child
           margin-right: 20px
+    .account-item.colum
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      .renew
+        color: #5858D1
+        font-size: 16px
+        font-family: "Roboto-Regular", sans-serif
     .account-item
       border: 1px solid rgba(255, 255, 255, .2)
       padding: 30px
@@ -293,8 +307,16 @@ body
         font-family: "Roboto-Medium", sans-serif
         font-size: 32px
         margin-bottom: 20px
+        text-transform: uppercase
         .title
           margin-left: 24px
+      &__head.col
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        span
+          font-size: 14px
+          font-family: "Roboto-Italic", sans-serif
       .account-item__line
         display: flex
         margin-bottom: 10px
@@ -312,4 +334,210 @@ body
           a
             text-decoration: none
             color: #5858D1
+  .plans-wrap
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    .plan-item.light
+      background: $white
+      color: #000
+      .head
+        background: rgba(81, 82, 86, .2)
+      .body
+        .price
+          color: $black
+          &:before, &:after
+            background: rgba(30, 31, 32, .5)
+          span
+            color: rgba(30, 31, 32, .5)
+        .head
+          color: $black
+        .features
+          li
+            color: $black
+        .advantages
+          li
+            color: rgba(30, 31, 32, .5)
+
+    .plan-item
+      background: url("../../../images/plan-bg.png") no-repeat center / cover
+      width: 100%
+      max-width: 345px
+      overflow: hidden
+      margin-right: 35px
+      transition: all .3s ease
+      &:hover
+        margin-top: -20px
+        .head
+          background: rgba(17, 17, 104, .3)
+      &:last-child
+        margin-right: 0
+      .head
+        text-align: center
+        font-size: 24px
+        font-family: "Roboto-Regular", sans-serif
+        color: $white
+        background: rgba(23, 23, 23, .7)
+        padding: 20px 0px
+      .body
+        padding-top: 17px
+        padding-bottom: 50px
+        text-align: center
+        .price
+          width: 100%
+          font-size: 27px
+          font-family: "Roboto-Bold", sans-serif
+          text-transform: uppercase
+          color: $white
+          display: flex
+          align-items: center
+          justify-content: space-between
+          div
+            min-width: 80px
+          &:before
+            content: ''
+            margin-right: 25px
+            width: 100%
+            height: 1px
+            background: rgba(255, 255, 255, .2)
+          &:after
+            margin-left: 25px
+            content: ''
+            width: 100%
+            height: 1px
+            background: rgba(255, 255, 255, .2)
+          span
+            font-family: "Roboto-Regular", sans-serif
+            display: block
+            text-transform: lowercase
+            font-size: 14px
+            color: $silver
+        .features
+          padding: 0
+          margin: 0
+          list-style: none
+          margin-top: 28px
+          margin-bottom: 15px
+          li
+            text-align: center
+            margin-bottom: 8px
+            font-size: 16px
+            color: $white
+            font-family: "Roboto-Medium", sans-serif
+        .high
+          text-align: center
+          margin-bottom: 15px
+          img
+            margin: 0 auto
+        .advantages
+          padding: 0
+          margin: 0
+          list-style: none
+          margin-bottom: 25px
+          li
+            font-size: 14px
+            color: #828282
+            text-align: center
+            font-family: "Roboto-Medium", sans-serif
+            margin-bottom: 8px
+        .advantages.free
+          li
+            text-decoration: line-through
+        .control
+          button
+            width: 245px
+            height: 56px
+  .accounts-fields
+    .form-field
+      display: flex
+      margin-bottom: 12px
+      &:last-child
+        border-bottom: 1px solid $silver
+        padding-bottom: 25px
+      .form-control
+        height: 35px
+        padding-left: 15px
+        width: 100%
+      label
+        width: 100%
+        max-width: 220px
+        display: block
+        font-size: 14px
+        font-family: "Roboto-Medium", sans-serif
+        color: $white
+        small
+          color: rgba(249, 249, 249, .4)
+          display: block
+          font-size: 12px
+          font-family: "Roboto-Regular", sans-serif
+        span
+          color: #5858D1
+      button
+        width: 160px
+        margin-top: 20px
+        margin-bottom: 40px
+        height: 43px
+  .acc-bottom
+    margin-top: 24px
+    a.delete-acc
+      color: #5858D1
+      font-size: 14px
+      font-family: "Roboto-Medium", sans-serif
+      text-decoration: none
+  .payment
+    .methods-wrap
+      border-bottom: 1px solid $silver
+      padding-bottom: 30px
+      margin-bottom: 35px
+      .method-item
+        display: flex
+        align-items: center
+        margin-bottom: 25px
+        &__icon
+          margin-left: 40px
+        &__label
+          font-size: 14px
+          font-family: "Roboto-Medium", sans-serif
+          color: $white
+          margin-right: 25px
+          margin-left: 15px
+        &__expire
+          font-size: 14px
+          color: $silver
+          font-family: "Roboto-Regular", sans-serif
+      button
+        width: 160px
+        height: 43px
+    .invoices-wrap
+      border-bottom: 1px solid $silver
+      padding-bottom: 30px
+      margin-bottom: 35px
+      .invoice-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 14px 20px
+        background: #323333
+        margin-bottom: 8px
+        a.file
+          display: flex
+          align-items: center
+          font-size: 14px
+          color: $white
+          font-family: "Roboto-Medium", sans-serif
+          text-decoration: none
+          img
+            margin-right: 10px
+        &__label
+          font-size: 12px
+          font-family: "Roboto-Medium", sans-serif
+          color: $silver
+          span
+            text-transform: uppercase
+            margin-right: 8px
+            display: inline-block
+          span.green
+            color: #19E108
+          span.red
+            color: #E13C08
 
