@@ -1,0 +1,365 @@
+$white: #fff
+$black: #000
+$dark: #202222
+$gray: #B0B1B1
+$silver: rgba(255, 255, 255, .4)
+$blue: #2E2E7D
+$red: #9B7D60
+$hover-color: #9B7D60
+@font-face
+  font-family: 'Roboto-Light'
+  src: url('../../../fonts/Roboto-Light.eot') format('eot'), url('../../../fonts/Roboto-Light.woff') format('woff'), url('../../../fonts/Roboto-Light.ttf') format('truetype')
+
+@font-face
+  font-family: 'Roboto-Regular'
+  src: url('../../../fonts/Roboto-Regular.eot') format('eot'), url('../../../fonts/Roboto-Regular.woff') format('woff'), url('../../../fonts/Roboto-Regular.ttf') format('truetype')
+@font-face
+  font-family: 'Roboto-Medium'
+  src: url('../../../fonts/Roboto-Medium.eot') format('eot'), url('../../../fonts/Roboto-Medium.woff') format('woff'), url('../../../fonts/Roboto-Medium.ttf') format('truetype')
+@font-face
+  font-family: 'Roboto-Medium-italic'
+  src: url('../../../fonts/Roboto-MediumItalic.eot') format('eot'), url('../../../fonts/Roboto-MediumItalic.woff') format('woff'), url('../../../fonts/Roboto-MediumItalic.ttf') format('truetype')
+
+@font-face
+  font-family: 'Roboto-Bold'
+  src: url('../../../fonts/Roboto-Bold.eot') format('eot'), url('../../../fonts/Roboto-Bold.woff') format('woff'), url('../../../fonts/Roboto-Bold.ttf') format('truetype')
+@font-face
+  font-family: 'Roboto-Black'
+  src: url('../../../fonts/Roboto-Black.eot') format('eot'), url('../../../fonts/Roboto-Black.woff') format('woff'), url('../../../fonts/Roboto-Black.ttf') format('truetype')
+@font-face
+  font-family: 'Roboto-BoldItalic'
+  src: url('../../../fonts/Roboto-BoldItalic.eot') format('eot'), url('../../../fonts/Roboto-BoldItalic.woff') format('woff'), url('../../../fonts/Roboto-BoldItalic.ttf') format('truetype')
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+*
+  box-sizing: border-box
+  outline: none
+img
+  display: block
+  max-width: 100%
+p
+  margin: 0
+.container
+  max-width: 1460px
+  width: 95%
+  margin: 0 auto
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+body
+  background: #1E1F20
+.btn.active
+  background: $white
+  color: #191A1B
+.btn
+  border: 1px solid $blue
+  outline: none
+  color: $white
+  font-size: 18px
+  background-color: $blue
+  text-transform: uppercase
+  text-decoration: none
+  text-align: center
+  cursor: pointer
+  position: relative
+  transition: all 0.2s ease-in-out
+  display: inline-block
+  font-family: 'Roboto-Medium', sans-serif
+  &:hover
+    background: $white
+    color: #191A1B
+.form-control
+  line-height: 16px
+  background: transparent
+  outline: none
+  font-family: 'Roboto-Medium', sans-serif
+  padding-left: 40px
+  font-size: 14px
+  color: $gray
+  height: 56px
+  display: block
+  width: 100%
+  padding-right: 15px
+  border: 1px solid rgba(255, 255, 255, .5)
+.d-flex
+  display: flex
+.top-line
+  padding: 25px 0px 50px 0px
+  .container
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  .logo
+    width: 100%
+    max-width: 340px
+  nav
+    display: block
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      display: flex
+      align-items: center
+      li
+        margin-right: 5px
+        &:last-child
+          margin-right: 0
+        button
+          height: 43px
+          width: 144px
+          margin: 0px 15px
+        a
+          color: #fff
+          text-decoration: none
+          padding: 15px 20px
+          transition: all .3s ease
+          position: relative
+          display: block
+          font-size: 18px
+          font-family: 'Roboto-Regular', sans-serif
+          &:after, &:before
+            content: ''
+            position: absolute
+            box-sizing: border-box
+            border: 3px solid transparent
+            width: 0
+            height: 0
+            transition: .3s
+          &:before
+            top: 0
+            left: 0
+            border-right: none
+            border-bottom: none
+          &:after
+            bottom: 0
+            right: 0
+            border-left: none
+            border-top: none
+          &:hover
+            color: $gray
+            &:after, &:before
+              width: 20px
+              height: 20px
+              border-color: $white
+
+#header
+  .container
+    .top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      nav
+        width: 100%
+        max-width: 490px
+        ul
+          padding: 0
+          display: flex
+          align-items: center
+          justify-content: space-between
+          li
+            list-style: none
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 21px
+            a
+              text-decoration: none
+              color: $white
+
+  ul.breadcrumbs
+    padding: 0
+    margin: 0
+    list-style: none
+    display: flex
+    margin-bottom: 10px
+    li
+      position: relative
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+        &:after
+          display: none
+      &:after
+        content: ''
+        width: 4px
+        height: 4px
+        background: #4B4C4D
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: -15px
+  ul.breadcrumbs
+    padding: 0
+    margin: 0
+    list-style: none
+    display: flex
+    margin-bottom: 10px
+    li, a
+      font-size: 16px
+      font-family: "Roboto-Regular"
+      color: #5858D1
+      text-decoration: none
+    li.logged, a.active
+      color: $silver
+    li
+      a.sign-out
+        color: #ffffff
+.document-panel
+  align-items: flex-start
+  display: flex
+  padding-bottom: 50px
+  .panel-menu
+    margin: 0
+    list-style: none
+    background: #26272C
+    width: 100%
+    max-width: 340px
+    padding: 25px 0px
+    li.title
+      color: #fff
+      font-size: 18px
+      padding: 15px 15px 15px 40px
+      font-family: "Roboto-Bold", sans-serif
+      text-decoration: none
+    li.title.last
+      &:before
+        content: ''
+        width: 260px
+        display: block
+        height: 1px
+        background: rgba(255, 255, 255, .2)
+        margin: 25px 0
+        margin-top: 0
+    li
+      a
+        display: flex
+        color: #fff
+        font-size: 18px
+        font-family: "Roboto-Regular", sans-serif
+        text-decoration: none
+        align-items: center
+        padding: 15px 15px 15px 40px
+        &:hover
+          background: #ffffff
+          color: #25272C
+          path
+            fill: #25272C
+        svg
+          margin-right: 25px
+      a.active
+        background: #ffffff
+        color: #25272C
+        path
+          fill: #25272C
+  .panel-content
+    width: 100%
+    color: $white
+    margin-left: 20px
+    .doc-banner
+      border: 1px solid $silver
+      padding: 50px
+      .head
+        font-size: 46px
+        line-height: 54px
+        font-family: "Roboto-Bold", sans-serif
+        margin-bottom: 8px
+      .sub-title
+        color: $gray
+        font-size: 20px
+        font-family: "Roboto-Regular", sans-serif
+        line-height: 23px
+    .doc-item
+      //padding: 32px 0px
+      padding-top: 32px
+      border-bottom: 1px solid $silver
+      p
+        margin: 0
+      .title
+        display: flex
+        font-size: 24px
+        color: $white
+        font-family: "Roboto-Regular", sans-serif
+        margin-bottom: 25px
+        img
+          margin-right: 15px
+      .text
+        font-size: 16px
+        line-height: 19px
+        font-family: "Roboto-Regular", sans-serif
+        color: $gray
+        margin-bottom: 25px
+        span
+          color: $white
+        a
+          color: #5858D1
+          text-decoration: none
+          transition: all .3s ease
+          display: block
+          margin-bottom: 20px
+          display: flex
+          text-transform: uppercase
+          align-items: center
+
+        .arrow-hover div
+          margin-left: 20px
+          position: relative
+          transition: all .3s ease
+          //top: 20px
+          width: 14px
+          height: 1px
+          background-color: #337AB7
+          box-shadow: 0 3px 5px rgba(0, 0, 0, .2)
+          //left: 0
+          display:  inline-block
+
+        .arrow-hover div::after
+          content: ''
+          position: absolute
+          width: 7px
+          height: 1px
+          top: -3px
+          right: -1px
+          background-color: #337AB7
+          transform: rotate(45deg)
+
+        .arrow-hover div::before
+          content: ''
+          position: absolute
+          width: 7px
+          height: 1px
+          top: 3px
+          right: -1px
+          background-color: #337AB7
+          box-shadow: 0 3px 5px rgba(0, 0, 0, .2)
+          transform: rotate(-45deg)
+        .arrow-hover
+          &:hover
+            color: #fff
+            div, div::before, div::after
+              background-color: #fff
+            div
+              width: 50px
+      .col
+        display: flex
+        .text
+          &:first-child
+            margin-right: 25px
+    .faq-item
+      display: flex
+      align-items: center
+      margin-top: 30px
+      .head
+        display: flex
+        align-items: center
+        font-size: 24px
+        color: #fff
+        margin-right: 25px
+        font-family: "Roboto-Regular", sans-serif
+        img
+          margin-right: 15px
+      button
+        width: 208px
+        height: 56px

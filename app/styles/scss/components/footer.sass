@@ -62,3 +62,71 @@ footer
           line-height: 14px
           color: $silver
           font-family: "Roboto-Regular", sans-serif
+#get-data
+  background: #1E1F20 url("../../../images/get-bg.png") no-repeat center / cover
+  padding-top: 175px
+  padding-bottom: 290px
+  .title
+    text-shadow: none
+    color: $white
+    line-height: 54px
+    margin-bottom: 15px
+  .sub-title
+    font-size: 20px
+    color: $gray
+    font-family: "Roboto-Regular", sans-serif
+    margin-bottom: 30px
+  .get-wrap
+    width: 100%
+    max-width: 715px
+  form
+    display: flex
+    .form-field
+      margin-right: 25px
+      width: 100%
+      max-width: 470px
+      label
+        font-size: 12px
+        color: $white
+        margin-top: 8px
+        display: block
+        font-family: "Roboto-Regular", sans-serif
+    input
+      width: 100%
+      max-width: 470px
+      background: transparent
+      border: 1px solid $silver
+      padding-left: 20px
+      color: $white
+      outline: none
+      height: 56px
+    button
+      width: 185px
+      height: 56px
+@media all and (max-width: 992px)
+  footer .foot-wrap
+    flex-wrap: wrap
+@media all and (max-width: 768px)
+  #get-data
+    background: #1E1F20
+    padding: 80px 0px
+    padding-top: 20px
+  #get-data .title
+    font-size: 24px
+    line-height: 28px
+  #get-data .sub-title
+    font-size: 14px
+    line-height: 16px
+  #get-data form
+    flex-direction: column
+  #get-data form button
+    width: 100%
+    margin-top: 15px
+  #get-data form .form-field
+    margin-right: 0
+    width: 100%
+    max-width: 100%
+    input
+      width: 100%
+      display: block
+      max-width: 100%
