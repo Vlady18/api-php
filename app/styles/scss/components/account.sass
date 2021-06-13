@@ -32,6 +32,8 @@ $hover-color: #9B7D60
 
 h1, h2, h3, h4, h5, h6
   margin: 0
+.blue
+  color: #5858D1
 *
   box-sizing: border-box
   outline: none
@@ -50,9 +52,6 @@ ul
   list-style: none
 body
   background: #1E1F20
-.btn.active
-  background: $white
-  color: #191A1B
 .btn
   border: 1px solid $blue
   outline: none
@@ -358,6 +357,10 @@ body
         .advantages
           li
             color: rgba(30, 31, 32, .5)
+        .control
+          button
+            background: #fff
+            color: #191A1B
 
     .plan-item
       background: url("../../../images/plan-bg.png") no-repeat center / cover
@@ -447,6 +450,7 @@ body
           button
             width: 245px
             height: 56px
+
   .accounts-fields
     .form-field
       display: flex
@@ -508,6 +512,44 @@ body
       button
         width: 160px
         height: 43px
+      .radio
+        position: absolute
+        z-index: -1
+        opacity: 0
+        margin: 10px 0 0 7px
+
+        + label
+          position: relative
+          padding: 0 0 0 35px
+          cursor: pointer
+
+          &:before
+            content: ''
+            position: absolute
+            top: -3px
+            left: 0
+            width: 18px
+            height: 18px
+            border: 2px solid $white
+            border-radius: 50%
+            background: transparent
+
+          &:after
+            content: ''
+            position: absolute
+            top: 4px
+            left: 7px
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            background: $white
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5)
+            opacity: 0
+            transition: .2s
+
+        &:checked + label:after
+          opacity: 1
+
     .invoices-wrap
       border-bottom: 1px solid $silver
       padding-bottom: 30px
@@ -526,6 +568,10 @@ body
           color: $white
           font-family: "Roboto-Medium", sans-serif
           text-decoration: none
+          &:hover
+            color: $silver
+            span
+              border-bottom: 1px solid $silver
           img
             margin-right: 10px
         &__label
@@ -622,5 +668,55 @@ body
         margin-bottom: 15px
       input
         width: 100%
-
+.burger
+  display: none
+@media all and (max-width: 1330px)
+  .cabinet-panel .plans-wrap
+    flex-wrap: wrap
+    .plan-item
+      margin-right: 0
+      margin-bottom: 20px
+@media all and (max-width: 992px)
+  .cabinet-panel .panel-menu
+    display: none
+  .cabinet-panel .panel-content
+    margin-left: 0
+  .top-line
+    display: none
+  .burger
+    display: block
+  #header .header-bottom
+    flex-wrap: wrap
+  #header .header-bottom ul.breadcrumbs
+    width: 100%
+    order: 5
+    margin-top: 20px
+@media all and (max-width: 768px)
+  .cabinet-panel .panel-content .account-item__head
+    font-size: 18px
+    line-height: 21px
+  .d-flex.dash-col
+    flex-wrap: wrap
+  .cabinet-panel .panel-content .account-item
+    margin-right: 0!important
+@media all and (max-width: 576px)
+  .cabinet-panel .panel-content .account-item .account-item__line
+    flex-direction: column
+  .cabinet-panel .panel-content .account-item .account-item__line span
+    margin-bottom: 10px
+    margin-right: 0
+  .cabinet-panel .payment .invoices-wrap .invoice-item
+    flex-wrap: wrap
+  .cabinet-panel .panel-content .account-item
+    padding: 30px 10px
+  .cabinet-panel .accounts-fields .form-field
+    flex-direction: column
+  .cabinet-panel .panel-content .account-item__head.col
+    flex-direction: column
+  .cabinet-panel .panel-content .files-wrap
+    flex-wrap: wrap
+    a:first-child
+      margin-right: 0!important
+  .cabinet-panel .plans-wrap .plan-item .body .control button
+    width: 90%
 
