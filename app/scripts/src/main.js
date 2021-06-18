@@ -1,10 +1,20 @@
  document.addEventListener('DOMContentLoaded', function () {
  $('.burger').on('click', function(){
   $('.mob-menu').addClass('active');
- })
+ });
   $('.mob-menu__head-close, .mob-menu a').on('click', function(){
    $('.mob-menu').removeClass('active');
-  })
+  });
+
+  $('.panel-menu a, .content-inner__hrefs a').on('click', function(e){
+    e.preventDefault();
+    const data = $(this).attr('href');
+    if (!data) return;
+    $('.panel-menu a, .content-inner__hrefs a').removeClass('active');
+    $('a[href="'+data+'"]').addClass('active');
+    $('.panel-content__inner').removeClass('active');
+    $('.panel-content__inner[data-panel="'+data+'"]').addClass('active');
+  });
 
    document.addEventListener("click", x=>0);
     $('#preloader').fadeOut();

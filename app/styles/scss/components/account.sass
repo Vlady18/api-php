@@ -139,6 +139,69 @@ body
               width: 20px
               height: 20px
               border-color: $white
+.mob-menu.active
+  display: block
+
+.mob-menu
+  display: none
+  background: rgba(30, 31, 32, .98)
+  position: fixed
+  width: 90%
+  height: auto
+  top: 0
+  text-align: left
+  padding-top: 20px
+  z-index: 9999
+  font-family: "Roboto-Regular", sans-serif
+  .container
+    width: 100%
+  &__head-close
+    margin-left: 25px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+  .login
+    font-size: 14px
+    text-decoration: none
+    display: block
+    color: $white
+    margin-bottom: 40px
+  &__title
+    color: $silver
+    font-family: "Roboto-Bold", sans-serif
+    font-size: 14px
+    margin-bottom: 20px
+  &__secondary-list
+    padding-left: 25px
+    li
+      margin-bottom: 18px
+      a
+        text-decoration: none
+        color: #E5E5E5
+
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      padding: 12px 20px
+      a
+        font-size: 18px
+        color: $white
+        font-family: "Roboto-Regular", sans-serif
+        text-decoration: none
+        display: flex
+        align-items: center
+        svg
+          margin-right: 20px
+  .sign-out
+    li
+      a
+        border-top: 1px solid $silver
+        border-bottom: 1px solid $silver
+        padding: 24px 0px
 #header
   .container
     .top
@@ -256,6 +319,10 @@ body
   .panel-content
     width: 100%
     margin-left: 20px
+    &__inner
+      display: none
+    &__inner.active
+      display: block
     .notification
       display: flex
       padding: 14px

@@ -38,6 +38,8 @@ h1, h2, h3, h4, h5, h6
 img
   display: block
   max-width: 100%
+.burger
+  display: none
 p
   margin: 0
 .container
@@ -147,8 +149,118 @@ body
               width: 20px
               height: 20px
               border-color: $white
+.top-line
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  nav
+    display: block
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      display: flex
+      align-items: center
+      li
+        margin-right: 5px
+        &:last-child
+          margin-right: 0
+        button
+          height: 43px
+          width: 144px
+          margin: 0px 15px
+        a
+          color: #fff
+          text-decoration: none
+          padding: 15px 20px
+          transition: all .3s ease
+          position: relative
+          display: block
+          font-size: 18px
+          font-family: 'Roboto-Regular', sans-serif
+          &:after, &:before
+            content: ''
+            position: absolute
+            box-sizing: border-box
+            border: 3px solid transparent
+            width: 0
+            height: 0
+            transition: .3s
+          &:before
+            top: 0
+            left: 0
+            border-right: none
+            border-bottom: none
+          &:after
+            bottom: 0
+            right: 0
+            border-left: none
+            border-top: none
+          &:hover
+            color: $gray
+            &:after, &:before
+              width: 20px
+              height: 20px
+              border-color: $white
+.mob-menu.active
+  display: block
 
-#header
+.mob-menu
+  display: none
+  background: rgba(30, 31, 32, .98)
+  position: fixed
+  width: 100%
+  height: 100vh
+  top: 0
+  text-align: right
+  padding-top: 40px
+  z-index: 9999
+  font-family: "Roboto-Regular", sans-serif
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+  .login
+    font-size: 14px
+    text-decoration: none
+    display: block
+    color: $white
+    margin-bottom: 40px
+  &__title
+    color: $silver
+    font-family: "Roboto-Bold", sans-serif
+    font-size: 14px
+    margin-bottom: 20px
+  &__secondary-list
+    li
+      margin-bottom: 18px
+      a
+        text-decoration: none
+        color: #E5E5E5
+
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    &:after
+      content: ''
+      width: 39px
+      height: 5px
+      display: block
+      background: $blue
+      margin-bottom: 25px
+      margin-left: auto
+      margin-right: 0
+    li
+      margin-bottom: 25px
+      a
+        font-size: 18px
+        color: $white
+        font-family: "Roboto-Regular", sans-serif
+        text-decoration: none
+header
   .container
     .top
       display: flex
@@ -173,44 +285,44 @@ body
               text-decoration: none
               color: $white
 
-  ul.breadcrumbs
-    padding: 0
-    margin: 0
-    list-style: none
-    display: flex
-    margin-bottom: 10px
-    li
-      position: relative
-      margin-right: 30px
-      &:last-child
-        margin-right: 0
-        &:after
-          display: none
+ul.breadcrumbs
+  padding: 0
+  margin: 0
+  list-style: none
+  display: flex
+  margin-bottom: 10px
+  li
+    position: relative
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
       &:after
-        content: ''
-        width: 4px
-        height: 4px
-        background: #4B4C4D
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: -15px
-  ul.breadcrumbs
-    padding: 0
-    margin: 0
-    list-style: none
-    display: flex
-    margin-bottom: 10px
-    li, a
-      font-size: 16px
-      font-family: "Roboto-Regular"
-      color: #5858D1
-      text-decoration: none
-    li.logged, a.active
-      color: $silver
-    li
-      a.sign-out
-        color: #ffffff
+        display: none
+    &:after
+      content: ''
+      width: 4px
+      height: 4px
+      background: #4B4C4D
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: -15px
+ul.breadcrumbs
+  padding: 0
+  margin: 0
+  list-style: none
+  display: flex
+  margin-bottom: 10px
+  li, a
+    font-size: 16px
+    font-family: "Roboto-Regular"
+    color: #5858D1
+    text-decoration: none
+  li.logged, a.active
+    color: $silver
+  li
+    a.sign-out
+      color: #ffffff
 .document-panel
   align-items: flex-start
   display: flex
@@ -262,6 +374,10 @@ body
     width: 100%
     color: $white
     margin-left: 20px
+    &__inner
+      display: none
+    &__inner.active
+      display: block
     .doc-banner
       border: 1px solid $silver
       padding: 50px
@@ -394,4 +510,66 @@ body
         margin-bottom: 15px
     .example-code
       border-bottom: 0
-
+@media all and (max-width: 992px)
+  .document-panel .panel-menu
+    display: none
+  .document-panel .panel-content
+    margin-left: 0
+  .top-line li
+    display: none
+  .top-line li.c-but
+    display: block
+  .burger
+    display: block
+  a.logo
+    margin-top: -20px
+    img
+      max-width: 85%
+@media all and (max-width: 768px)
+  .document-panel .panel-content .doc-banner
+    padding: 20px
+  .document-panel .panel-content .faq-item
+    flex-direction: column
+  .document-panel .panel-content .faq-item button
+    width: 100%
+  .document-panel .panel-content .faq-item .control
+    margin-top: 20px
+    width: 100%
+  .document-panel .panel-content .get-data .title-lg
+    font-size: 24px
+    line-height: 28px
+  #get-data .sub-title, .get-data .sub-title
+    font-size: 14px
+    line-height: 16px
+  #get-data form, .get-data form
+    flex-direction: column
+  #get-data form .form-field, .get-data form .form-field
+    margin-right: 0
+  #get-data form, .get-data form .control
+    margin-top: 20px
+    button
+      width: 100%
+  .document-panel .panel-content .table .tr div
+    width: 100%
+  .document-panel .panel-content .table
+    font-size: 12px
+@media all and (max-width: 576px)
+  .document-panel .panel-content .doc-item .col
+    flex-wrap: wrap
+  .document-panel .panel-content .doc-item .col .text:first-child
+    margin-right: 0
+  ul.breadcrumbs li, ul.breadcrumbs a
+    font-size: 12px
+  .document-panel .panel-content .doc-banner .head
+    font-size: 18px
+    line-height: 21px
+  .document-panel .panel-content .doc-banner .sub-title
+    font-size: 14px
+    line-height: 16px
+  .document-panel .panel-content .doc-item .text
+    font-size: 12px
+    line-height: 14px
+  .top-line nav ul li.c-but button
+    font-size: 10px
+    width: 100px
+    height: 22px

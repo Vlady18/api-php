@@ -21,7 +21,8 @@
 
 <body>
 
-<div id="header">
+
+<header>
   <div class="top-line">
     <div class="container">
       <a href="" class="logo">
@@ -31,7 +32,7 @@
         <ul>
           <li><a href="">Product</a></li>
           <li><a href="">Documentation</a></li>
-          <li><a href="">FAQ</a></li>
+          <li><a href="">Plans</a></li>
           <li><a href="">Support</a></li>
           <li class="c-but">
             <button class="btn">GET FREE KEY</button>
@@ -39,24 +40,58 @@
           <li><a href="">Sign In</a></li>
         </ul>
       </nav>
+      <div class="burger">
+        <img src="images/burger.svg" alt="">
+      </div>
     </div>
   </div>
+  <div class="mob-menu">
+    <div class="container">
+      <div class="mob-menu__head">
+        <a href="/" class="logo">
+          <img src="images/LOGO.png" alt="">
+        </a>
+        <div class="mob-menu__head-close">
+          <img src="images/close.svg" alt="">
+        </div>
+      </div>
+      <ul class="mob-menu__list">
+        <li><a href="">Product</a></li>
+        <li><a href="">Documentation</a></li>
+        <li><a href="#pro-plan">Plans</a></li>
+        <li><a href="">Support</a></li>
+      </ul>
+      <a href="" class="login">Sign In</a>
+      <div class="mob-menu__title">GENERAL OVERVIEW</div>
+      <ul class="mob-menu__secondary-list content-inner__hrefs">
+        <li><a href="overview">Overview</a></li>
+        <li><a href="supported-currencies">Supported currencies</a></li>
+      </ul>
+      <div class="mob-menu__title">CODE EXAMPLES</div>
+      <ul class="mob-menu__secondary-list content-inner__hrefs">
+        <li><a href="php">PHP Code</a></li>
+        <li><a href="">Python</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
   <div class="container">
     <div class="document-panel">
       <ul class="panel-menu">
         <li class="title">
           <span>GENERAL OVERVIEW</span>
         </li>
-        <li><a href="">
+        <li><a href="overview">
           <span>Overview</span>
         </a></li>
-        <li><a href="">
+        <li><a href="supported-currencies">
           <span>Supported currencies</span>
         </a></li>
         <li class="title last">
           <span>CODE EXAMPLES</span>
         </li>
-        <li><a href="">
+        <li><a href="php">
 
           <span>PHP Code</span>
         </a></li>
@@ -75,7 +110,7 @@
             <a href="" class="active">Dashboard</a>
           </li>
         </ul>
-        <div class="panel-content__inner" data-panel="overview">
+        <div class="panel-content__inner active" data-panel="overview">
           <div class="doc-banner">
             <div class="head">ExchangeRate-API Documentation</div>
             <div class="sub-title">Broad overview of our currency conversion API and available endpoints</div>
@@ -273,7 +308,7 @@
             </div>
           </div>
         </div>
-        <div class="panel-content__inner" data-panel="supported-currencies">
+        <div class="panel-content__inner" data-panel="php">
           <div class="doc-banner">
             <div class="head">Exchange Rate API PHP Documentation</div>
             <div class="sub-title">How To Use Our PHP Exchange Rates API</div>
