@@ -208,9 +208,37 @@ header
   padding-top: 40px
   height: 100vh
   position: relative
-  .tradingview-widget-container
+  .ribbon
     position: absolute
-    bottom: 0
+    bottom: -1px
+    width: 100%
+    background: $black
+    padding: 12px 0px
+    overflow: hidden
+  .ribbon-wrap
+    display: flex
+    .ribbon-item
+      display: flex
+      align-items: center
+      flex-wrap: nowrap
+      font-size: 16px
+      color: $white
+      //min-width: 330px
+      padding: 0px 14px
+      border-right: 1px solid $silver
+      &__currency
+        font-family: "Roboto-Bold", sans-serif
+      &__price
+        font-family: "Roboto-Light", sans-serif
+        margin: 0 12px
+      &__percent
+        font-family: "Roboto-Regular", sans-serif
+      .growth
+        color: #5858D1
+      .down
+        color: #E13C08
+
+
   .header-main
     margin-top: 130px
   .phrase
