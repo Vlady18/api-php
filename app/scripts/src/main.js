@@ -16,6 +16,18 @@
     $('.panel-content__inner[data-panel="'+data+'"]').addClass('active');
   });
 
+  $('.register').on('click', function(){
+    $('#register').addClass('active');
+  });
+  $('.login').on('click', function(){
+    $('#login').addClass('active');
+  });
+
+    $('.close-modal').on('click', function(){
+      $('#register, #login').removeClass('active');
+    });
+
+
    document.addEventListener("click", x=>0);
     $('#preloader').fadeOut();
      if(document.querySelector('#fullpage')){

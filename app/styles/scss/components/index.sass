@@ -48,6 +48,108 @@ ul
   margin: 0
   padding: 0
   list-style: none
+.window-popup-container.active
+  display: flex
+.window-popup-container
+  background-color: rgba(0, 0, 0, 0.7)
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  display: none
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  overflow: hidden
+  z-index: 2500
+  .window-popup
+    background: #26272C
+    text-align: center
+    padding: 50px 60px
+    width: 100%
+    max-width: 470px
+    position: relative
+    .close-modal
+      position: absolute
+      top: 20px
+      right: 20px
+    .title-popup
+      letter-spacing: 0.02em
+      font-family: "Roboto-Bold", sans-serif
+      font-size: 32px
+      color: $white
+    .sub-title
+      color: #E5E5E5
+      font-family: "Roboto-Regular", sans-serif
+      font-size: 18px
+      margin-top: 5px
+      margin-bottom: 25px
+    .banner
+      background: #1D5A18
+      color: #F9F9F9
+      font-size: 12px
+      font-family: "Roboto-Regular", sans-serif
+      padding: 11px
+      text-align: center
+      margin: 24px 0px
+      margin-top: 0
+    form
+      text-align: left
+      border-bottom: 1px solid $silver
+      padding-bottom: 20px
+      label
+        display: block
+        font-size: 14px
+        font-family: "Roboto-Medium", sans-serif
+        color: $white
+        margin-bottom: 12px
+      .form-field
+        margin-bottom: 24px
+        span
+          font-size: 12px
+          color: #787878
+          font-family: "Roboto-Regular", sans-serif
+      input
+        width: 100%
+        height: 35px
+        border: 1px solid $silver
+        outline: none
+        color: $gray
+        background: transparent
+        padding: 0px 15px
+        font-size: 14px
+        font-family: "Roboto-Regular", sans-serif
+      button
+        background: #2E2E7D
+        height: 55px
+        text-align: center
+        font-size: 18px
+        font-family: "Roboto-Medium", sans-serif
+        color: $white
+        border: none
+        margin-bottom: 5px
+      small
+        font-size: 12px
+        font-family: "Roboto-Regular"
+        color: #787878
+        a
+          color: $white
+
+      button
+        width: 100%
+    .sign
+      font-size: 14px
+      font-family: "Roboto-Medium", sans-serif
+      color: $white
+      margin-top: 20px
+      a
+        color: #5858D1
+        text-decoration: none
+      span
+
 .btn
   border: 1px solid $blue
   outline: none
@@ -326,13 +428,19 @@ header
   display: flex
   justify-content: space-between
   align-items: center
+  .code-block
+    //background: url("../../../images/IMAGE_WITH_CODE-black.png") no-repeat center / cover
+    background: #000
+    width: 50%
+    .only-code
+      background: url("../../../images/tt2.png") no-repeat center
   .code
     //position: absolute
     //top: 0
     //left: 0
   .container
-    //display: flex
-    //justify-content: flex-end
+    display: flex
+    justify-content: flex-end
     margin-right: 10%
   .advantages-wrap
     max-width: 845px
@@ -1187,6 +1295,9 @@ header
     height: auto
 
 @media all and (max-width: 576px)
+  .window-popup-container .window-popup
+    padding: 50px 10px
+    width: 95%
   header .header-main
     margin-top: 65px
   #faq-info .faq-item .head
