@@ -51,7 +51,7 @@ function taskBabel() {
 function taskCss () {
   return gulp.src('dist/styles/*.css')
           .pipe(plumber())
-          .pipe(minifyCSS())
+//          .pipe(minifyCSS())
           // .pipe(stripCssComments(true))
           .pipe(gulp.dest('dist/styles/'));
 }
@@ -92,7 +92,7 @@ function taskScss () {
                     includePaths: [
                         'app/styles/scss/'
                     ],
-                    outputStyle: 'compressed'
+//                    outputStyle: 'compressed'
               }))
               .pipe(autoprefixer({
                  browsers: autoPrefixBrowserList,

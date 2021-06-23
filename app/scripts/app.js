@@ -2978,7 +2978,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   $('.close-modal').on('click', function () {
-    $('#register, #login').removeClass('active');
+    $('.window-popup-container').removeClass('active');
   });
 
   document.addEventListener("click", x => 0);

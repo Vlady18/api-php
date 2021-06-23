@@ -24,7 +24,7 @@
   });
 
     $('.close-modal').on('click', function(){
-      $('#register, #login').removeClass('active');
+      $('.window-popup-container').removeClass('active');
     });
 
 
